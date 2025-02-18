@@ -1,0 +1,1 @@
+export const SPF_WelcomeMessage = 'WelcomeMessage';

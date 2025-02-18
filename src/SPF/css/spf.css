@@ -1,0 +1,261 @@
+.btn-SPF{
+	color : #fff;
+	background-color : #14558f;
+	border-color : #14558f;
+}
+
+input[type="radio"]{margin: 10px 3px};
+
+.SPFInput{
+	padding-left: 10px;
+}
+
+.SPFError{
+	color: #CD0D0D !important;
+}
+
+.SPFSuccess{
+	color : green;
+}
+
+.spfHeading{
+	text-align: center;
+	color: #616D7E;
+	font-family: Tahoma;
+	font-size: 18px;
+	padding-top: 50px;
+}
+.navigation-pane {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    background-color: greenyellow; 
+}
+
+a:link {
+  color: #14558f;
+}
+
+
+.spfHeader{
+	background-color : #14558f !important;
+}
+
+.spfMain{
+	padding-left: 30%;
+}
+
+.spfUserDetail{
+	text-align: right;
+}
+
+.spfLinkHeading{
+	font-style:italic;
+	font-family: cursive;
+	font: bold;
+	color: green;
+}
+#footerSPF {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: 25px;   /* Height of the footer */
+	
+ }
+
+ 
+.pagination {
+	margin: 15px auto;
+	display: flex;
+	list-style: none;
+	outline: none;
+  }
+  .pagination > .active > a{
+	background-color: #14558f; ;
+	border-color: #14558f; ;
+	color: #fff;
+  }
+  .pagination > li > a{
+	border: 1px solid #14558f; ;
+	padding: 5px 10px;
+	outline: none;
+	cursor: pointer;
+  }
+
+  .bg-light {
+    background-color: #f2f2f2 !important
+}
+.container_padding {
+  padding: 0 50px;
+
+  @media (max-width: 767px) {
+      padding: 0 20px;
+  }
+}
+  
+.applicationPublic {
+  padding: 10px 50px;
+  padding-bottom: 4px;
+
+  h2 {
+      margin: unset;
+  }
+
+  @media (max-width: 767px) {
+      padding: 15px 20px;
+
+  }
+}
+  
+.page_container {
+  width: 100%;
+
+  @media (max-width: 912px) {
+      width: 100%;
+  }
+}
+
+.bs_login_info {
+  display: flex;
+  flex-Wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+
+  @media (max-width:912px) {
+      flex-wrap: unset;
+      flex-direction: row;
+      align-items: flex-end;
+  }
+}
+
+.header_title {
+  font-weight: 350;
+  color: #388557;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #388557;
+  font-size: 2rem;
+  display: inline-block;
+  margin-left: 0.4rem;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  width: 100%;
+}
+  .pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus{
+	background-color: #14558f; ;
+	border-color: #14558f;;
+	outline: none ;
+  }
+  .pagination > li > a, .pagination > li > span{
+	color: #14558f
+  }
+  .pagination > li:first-child > a, .pagination > li:first-child > span, .pagination > li:last-child > a, .pagination > li:last-child > span{
+	border-radius: unset
+  }
+  
+
+@media only screen and (max-width: 768px) {
+    .spfUserDetail {
+        text-align: left !important;
+    }
+}
+
+
+.sidenav {
+  border-right: 1mm ridge rgba(255, 255, 255, .6);
+}
+
+.sidenavHeading{
+	background-color : #bcc9da;
+	font-size: small;
+	text-align: center;
+}
+
+.sideNavLinks{
+	border-width: 1px 0 1px 0;
+	border-color: red;
+	border-style: solid;
+}
+
+.was-validated .form-control:valid, .form-control.is-valid {
+  background-image: none;  
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #4D4D4D;
+}
+
+
+.footer_slim {
+    padding: 20px 50px 0px;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+
+    @media (max-width: 767px) {
+        padding: 10px 20px;
+        gap: 20px;
+
+    }
+}
+
+.header_section{
+  height: 20%;
+}
+
+.main_section{
+  height: 60%;
+  min-height: calc(100vh - 400px); /* Adjust 200px to the combined height of header and footer */
+  padding: 20px; /* Optional: Add some padding for spacing */
+  padding-left: 50px;
+
+}
+.footer_section{
+  height: 20%;
+}
+.banner_expand {
+    display: flex;
+    padding: 10px 0px 5px 0px;
+
+    @media (max-width: 767px) {
+        flex-direction: column;
+    }
+}
+
+.banner_close {
+    display: none;
+}
+.footer_wrapper {
+    gap: 20px;
+	width:100%;
+
+}
+
+.footer_info {
+    width: 60%;
+    text-align: justify;
+    font-size: 16px;
+
+    p {
+        margin-top: 15px;
+        margin-bottom: 0px;
+    }
+
+    @media (max-width: 910px) {
+        width: fit-content;
+    }
+}
+
+
+.footer_contact {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+
+    @media (max-width: 910px) {
+        width: 90%;
+        flex-wrap: wrap;
+        flex-direction: unset;
+        gap: 10px;
+        justify-content: space-between;
+    }
+}
