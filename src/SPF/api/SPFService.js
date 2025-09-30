@@ -36,7 +36,7 @@ class SPFService{
         const response = await fetch(`https://xg1jbysjaa.execute-api.us-east-1.amazonaws.com/Dev/mylist`, {
             headers: {
                 "Content-Type": "application/json",
-                "x-api-key": "5qsXKU54Os3KxyIjVTfgY8BWUHpzwpIK5Nf3V9Hd"
+                "x-api-key": "yourkey"
             }
         });
         return response;
