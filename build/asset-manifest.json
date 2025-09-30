@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/SPF-Web/static/css/main.9d1d3ac9.css",
+    "main.js": "/SPF-Web/static/js/main.cdacedb3.js",
+    "static/js/787.f6ac9a59.chunk.js": "/SPF-Web/static/js/787.f6ac9a59.chunk.js",
+    "static/media/SourceSansPro-Regular.woff": "/SPF-Web/static/media/SourceSansPro-Regular.506518818f296f675786.woff",
+    "static/media/SourceSansPro-Bold.woff": "/SPF-Web/static/media/SourceSansPro-Bold.57c79dcce200724e721b.woff",
+    "static/media/SourceSansPro-Regular.woff2": "/SPF-Web/static/media/SourceSansPro-Regular.dee8dabc935c456d6d1c.woff2",
+    "static/media/SourceSansPro-Bold.woff2": "/SPF-Web/static/media/SourceSansPro-Bold.8a2149944e5b91508092.woff2",
+    "static/media/SourceSansPro-It.woff": "/SPF-Web/static/media/SourceSansPro-It.cce4ceb0a24e28e71c5b.woff",
+    "static/media/SourceSansPro-It.woff2": "/SPF-Web/static/media/SourceSansPro-It.8f81b85da57fe76bca9e.woff2",
+    "static/media/vglogo.gif": "/SPF-Web/static/media/vglogo.5894aba6829c81b83010.gif",
+    "static/media/welcomeSPF.gif": "/SPF-Web/static/media/welcomeSPF.5894aba6829c81b83010.gif",
+    "index.html": "/SPF-Web/index.html",
+    "main.9d1d3ac9.css.map": "/SPF-Web/static/css/main.9d1d3ac9.css.map",
+    "main.cdacedb3.js.map": "/SPF-Web/static/js/main.cdacedb3.js.map",
+    "787.f6ac9a59.chunk.js.map": "/SPF-Web/static/js/787.f6ac9a59.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9d1d3ac9.css",
+    "static/js/main.cdacedb3.js"
+  ]
+}

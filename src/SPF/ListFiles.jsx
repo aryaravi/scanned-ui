@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import axios from "axios";
+
 import {
   Box,
   Button,
@@ -79,24 +79,22 @@ class ListFiles extends Component {
 
 fetchS3Files = async () => {
   try {
-      const response = await axios.get(
-          "https://o4mhq37cu9.execute-api.us-east-1.amazonaws.com/development",  
-          {
-              roles: ["Spf_nonlegal_scannedfiles", "Spf_legal_scannedfiles"]  // Sending roles in body
-          },
-          {
-              headers: {
-                 // "x-api-key": "YOUR_API_KEY",  
-                  "Content-Type": "application/json"
-              }
-          }
-      );
-      
-      console.log("S3 Files:", response.data);
+    const response = await fetch(
+      "https://o4mhq37cu9.execute-api.us-east-1.amazonaws.com/development",
+      {
+        method: 'GET',
+        headers: {
+          // "x-api-key": "YOUR_API_KEY",
+          "Content-Type": "application/json"
+        }
+      }
+    );
+    const data = await response.json();
+    console.log("S3 Files:", data);
   } catch (error) {
-      console.error("Error fetching S3 files:", error);
+    console.error("Error fetching S3 files:", error);
   }
-}; 
+};
 
   handleFolderClick = (folder, parentFolder = null) => {
     this.setState({ currentFolder: folder, parentFolder });

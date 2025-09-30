@@ -5,27 +5,25 @@
   "private": true,
   "dependencies": {
     "@emailjs/browser": "^3.10.0",
+    "@emotion/react": "11.14.0",
+    "@emotion/styled": "11.14.0",
+    "@massds/mayflower-assets": "^12.7.0",
+    "@massds/mayflower-react": "^11.21.0",
+    "@mui/icons-material": "6.3.0",
+    "@mui/material": "6.3.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
-    "@massds/mayflower-assets": "^12.7.0",
-    "@massds/mayflower-react": "^12.7.0",
     "bootstrap": "^5.2.3",
     "dotenv": "^16.0.3",
     "env-cmd": "^10.1.0",
+    "material-icons": "1.13.12",
     "react": "^18.2.0",
-    "react-axios": "^2.0.6",
     "react-bootstrap": "^2.7.2",
     "react-dom": "^18.2.0",
     "react-paginate": "^8.1.4",
     "react-router-dom": "^6.8.1",
-    "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4" ,
-    "@mui/material": "6.3.0",
-    "material-icons": "1.13.12",
-    "@emotion/styled": "11.14.0",
-    "@emotion/react": "11.14.0",
-    "@mui/icons-material": "6.3.0"
+    "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -36,8 +34,7 @@
     "build:qa": "env-cmd -f .env.qa react-scripts start",
     "build:st": "env-cmd -f .env.st react-scripts start",
     "build:prd": "env-cmd -f .env.prd react-scripts start",
-    "analyze":"source-map-explorer 'build/static/js/*.js'"
-    
+    "analyze": "source-map-explorer 'build/static/js/*.js'"
   },
   "eslintConfig": {
     "extends": [
@@ -56,5 +53,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "react-scripts": "^5.0.1"
   }
 }

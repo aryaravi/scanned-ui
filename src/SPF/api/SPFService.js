@@ -1,4 +1,4 @@
-import axios from "axios";
+
 
 class SPFService{
     constructor() {
@@ -7,75 +7,97 @@ class SPFService{
         this.orgId = sessionStorage.getItem('SPF_Authenticate_OrgId');
       }
     
-    deleteFile(fileDestId){
+    async deleteFile(fileDestId){
         console.log('Hi deleteFile'+ fileDestId)
-        return axios.delete(`${this.url}/deleteFile/${this.userName}/${fileDestId}`); 
+        const response = await fetch(`${this.url}/deleteFile/${this.userName}/${fileDestId}`, {
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
+        return response;
     }
 
-    getWelcomeMessage(){
+    async getWelcomeMessage(){
         console.log('API URL = '+this.url+' userName:'+this.userName+'   '+this.orgId);
-        return axios.get(`${this.url}/welcomeMessage/${this.userName}/${this.orgId}`);
+        const response = await fetch(`${this.url}/welcomeMessage/${this.userName}/${this.orgId}`);
+        return response;
     }
 
-    getWelcomeMessageWithParam(user,orgId){
+    async getWelcomeMessageWithParam(user,orgId){
         console.log('getWelcomeMessageWithParam :'+user);
-        return axios.get(`${this.url}/welcomeMessage/${user}/${orgId}`);
+        const response = await fetch(`${this.url}/welcomeMessage/${user}/${orgId}`);
+        return response;
     }
 
 
     
-    fetchAllDownloads(){
-        return axios.get(`https://xg1jbysjaa.execute-api.us-east-1.amazonaws.com/Dev/mylist`,{
-            headers : {
-                "Content-Type" : "application/json",
-                "x-api-key" : "5qsXKU54Os3KxyIjVTfgY8BWUHpzwpIK5Nf3V9Hd"
-            },
+    async fetchAllDownloads(){
+        const response = await fetch(`https://xg1jbysjaa.execute-api.us-east-1.amazonaws.com/Dev/mylist`, {
+            headers: {
+                "Content-Type": "application/json",
+                "x-api-key": "5qsXKU54Os3KxyIjVTfgY8BWUHpzwpIK5Nf3V9Hd"
+            }
         });
+        return response;
     }
-    fetchAllDownloadsDESC(){
-        return axios.get(`${this.url}/download/${this.userName}/getAllDownloadableFile/DESC`);
+    async fetchAllDownloadsDESC(){
+        const response = await fetch(`${this.url}/download/${this.userName}/getAllDownloadableFile/DESC`);
+        return response;
     }
-    fetchAllDownloadsASC(){
-        return axios.get(`${this.url}/download/${this.userName}/getAllDownloadableFile/ASC`);
+    async fetchAllDownloadsASC(){
+        const response = await fetch(`${this.url}/download/${this.userName}/getAllDownloadableFile/ASC`);
+        return response;
     }
-    searchDownloads(fileName){
-        return axios.get(`${this.url}/download/${this.userName}/${fileName}/searchFile`);
+    async searchDownloads(fileName){
+        const response = await fetch(`${this.url}/download/${this.userName}/${fileName}/searchFile`);
+        return response;
     }
-    searchDownloadsASC(fileName){
-        return axios.get(`${this.url}/${this.userName}/download/${fileName}/searchFile/ASC`);
+    async searchDownloadsASC(fileName){
+        const response = await fetch(`${this.url}/${this.userName}/download/${fileName}/searchFile/ASC`);
+        return response;
     }
-    searchDownloadsDESC(fileName){
-        return axios.get(`${this.url}/${this.userName}/download/${fileName}/searchFile/DESC`);
+    async searchDownloadsDESC(fileName){
+        const response = await fetch(`${this.url}/${this.userName}/download/${fileName}/searchFile/DESC`);
+        return response;
     }
 
    
    
-    fetchAllUploaded(){
-        return axios.get(`${this.url}/uploaded/${this.userName}/getAllUploadedFile`);
+    async fetchAllUploaded(){
+        const response = await fetch(`${this.url}/uploaded/${this.userName}/getAllUploadedFile`);
+        return response;
     }
-    fetchAllUploadedDESC(){
-        return axios.get(`${this.url}/uploaded/${this.userName}/getAllUploadedFile/DESC`);
+    async fetchAllUploadedDESC(){
+        const response = await fetch(`${this.url}/uploaded/${this.userName}/getAllUploadedFile/DESC`);
+        return response;
     }
-    fetchAllUploadedASC(){
-        return axios.get(`${this.url}/uploaded/${this.userName}/getAllUploadedFile/ASC`);
+    async fetchAllUploadedASC(){
+        const response = await fetch(`${this.url}/uploaded/${this.userName}/getAllUploadedFile/ASC`);
+        return response;
     }
-    searchUploaded(fileName){
-        return axios.get(`${this.url}/uploaded/${this.userName}/${fileName}/searchFile`);
+    async searchUploaded(fileName){
+        const response = await fetch(`${this.url}/uploaded/${this.userName}/${fileName}/searchFile`);
+        return response;
     }
-    searchUploadedASC(fileName){
-        return axios.get(`${this.url}/uploaded/${this.userName}/${fileName}/searchFile/ASC`);
+    async searchUploadedASC(fileName){
+        const response = await fetch(`${this.url}/uploaded/${this.userName}/${fileName}/searchFile/ASC`);
+        return response;
     }
-    searchUploadedDESC(fileName){
-        return axios.get(`${this.url}/uploaded/${this.userName}/${fileName}/searchFile/DESC`);
+    async searchUploadedDESC(fileName){
+        const response = await fetch(`${this.url}/uploaded/${this.userName}/${fileName}/searchFile/DESC`);
+        return response;
     }
 
-    uploadFile(formData,location){
-        return axios.post(`${this.url}/upload/${this.userName}/${location}/${this.orgId}`, formData, {
-			headers: {
-			  'Content-Type': 'multipart/form-data'
-			}
-		});
-
+    async uploadFile(formData, location){
+        const response = await fetch(`${this.url}/upload/${this.userName}/${location}/${this.orgId}`, {
+            method: 'POST',
+            body: formData,
+            headers: {
+                // 'Content-Type': 'multipart/form-data' will be set automatically by the browser
+            }
+        });
+        return response;
     }
 
 
